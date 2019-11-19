@@ -1,0 +1,46 @@
+<section id="form"><!--form-->
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+						<h2>Tìm kiếm nâng cao</h2>
+						<form>
+							<p><input type="text" id="keyword"></p>
+							<p><input type="radio" name="search" id="producer">Tìm kiếm theo nhà sản xuất</p>
+							<p><input type="radio" name="search" id="type">Tìm kiếm theo kiểu hàng hóa</p>
+						</form>
+                        </button>
+				</div>
+			</div>
+			{{#each products }}
+						<div class="row">
+							{{#each this}}
+							<div class="col-sm-4">
+								<div class="product-image-wrapper">
+									<div class="single-products">
+										<div class="productinfo text-center">
+											<img src="images/shop/product12.jpg" alt="" />
+											<h2>{{this.price}} VND</h2>
+											<p>{{this.name}}</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="/product_detail"><i class="fa fa-plus-square"></i>Xem chi tiết</a></li>
+									</ul>
+								</div>
+							</div>
+							</div>
+							{{/each}}		
+						</div>
+						</div>
+			{{/each}}
+		</div>
+</section><!--/form-->
+    <script src="js/jquery.js"></script>
+	<script src="js/price-range.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
